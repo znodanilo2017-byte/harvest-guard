@@ -1,0 +1,8 @@
+.env
+*.pem
+.terraform/
+*.tfstate
+*.tfstate.*
+__pycache__/
+venv/
+.streamlit/
