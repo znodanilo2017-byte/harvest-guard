@@ -98,6 +98,32 @@ if not df.empty:
     
     col4.metric("Last Update", latest['timestamp'].strftime('%H:%M:%S'))
 
+    # --- LOGIC: "SMART IRRIGATION RECOMMENDATION" ---
+    # The Business Logic: 
+    # If Soil is DRY (< 30%) AND No Rain is coming (< 50%) -> WATER NOW
+    # If Soil is DRY (< 30%) BUT Rain IS coming (> 50%) -> WAIT FOR RAIN (Save Money)
+    
+    latest_moist = float(latest['moisture'])
+    latest_rain_prob = float(latest['rain_prob']) if 'rain_prob' in latest else 0
+    
+    recommendation = "✅ ALL GOOD"
+    rec_color = "off"
+    
+    if latest_moist < 0.30:
+        if latest_rain_prob > 50:
+            recommendation = "☁️ WAIT FOR RAIN" # Smart decision
+            rec_color = "normal"
+        else:
+            recommendation = "💧 START IRRIGATION" # Critical action
+            rec_color = "inverse"
+            
+    # Add a new metric row
+    st.divider()
+    st.subheader("🤖 AI Agronomist Recommendation")
+    c1, c2, c3 = st.columns(3)
+    c1.metric("Rain Probability", f"{latest_rain_prob}%")
+    c2.metric("Action Required", recommendation, delta_color=rec_color)
+
     # --- CHARTS ---
     st.subheader("Real-Time Conditions (Last 100 Readings)")
     

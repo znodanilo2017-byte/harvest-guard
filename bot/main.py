@@ -9,7 +9,7 @@ import os
 # Lviv Coordinates
 LAT = 49.83
 LON = 24.02
-API_URL = f"https://api.open-meteo.com/v1/forecast?latitude={LAT}&longitude={LON}&current=temperature_2m,soil_moisture_0_to_1cm"
+API_URL = f"https://api.open-meteo.com/v1/forecast?latitude={LAT}&longitude={LON}&current=temperature_2m,soil_moisture_0_to_1cm,precipitation_probability"
 DEVICE_ID = "SENSOR-LVIV-01"
 
 # AWS & Telegram Config
@@ -64,13 +64,13 @@ def fetch_sensor_data():
         data = response.json()
         current = data['current']
         
-        # Structure the payload
         payload = {
             "device_id": DEVICE_ID,
             "timestamp": datetime.datetime.now().isoformat(),
             "metrics": {
                 "temperature": current['temperature_2m'],
-                "moisture": current['soil_moisture_0_to_1cm']
+                "moisture": current['soil_moisture_0_to_1cm'],
+                "rain_prob": current['precipitation_probability'] # <--- NEW
             }
         }
         return payload
