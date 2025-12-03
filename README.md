@@ -36,13 +36,13 @@ Modern agriculture requires precision. **Harvest-Guard** is an Industrial IoT (I
 
 ### Field Monitor Dashboard
 
-![Main](../Main_app.png)
-![Dashboard 1](../Dashboard1.png)
-![Dashboard 2](../Dashboard2.png)
-![Raw Sensor Logs](../RawSensorLogs.png)
+![Main](Main_app.png)
+![Dashboard 1](Dashboard1.png)
+![Dashboard 2](Dashboard2.png)
+![Raw Sensor Logs](RawSensorLogs.png)
 
 ### Active Alerts
-[Alert Screenshot](../Alert.png)
+[Alert Screenshot](Alert.png)
 
 ---
 
