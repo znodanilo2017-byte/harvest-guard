@@ -42,7 +42,7 @@ Modern agriculture requires precision. **Harvest-Guard** is an Industrial IoT (I
 ![Raw Sensor Logs](RawSensorLogs.png)
 
 ### Active Alerts
-[Alert Screenshot](Alert.png)
+![Alert Screenshot](Alert.png)
 
 ---
 
