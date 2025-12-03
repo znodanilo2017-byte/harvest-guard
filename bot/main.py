@@ -22,7 +22,7 @@ if not TELEGRAM_TOKEN or not TELEGRAM_CHAT_ID:
     raise ValueError("❌ Error: Missing TELEGRAM_TOKEN or TELEGRAM_CHAT_ID environment variables.")
 
 # Thresholds
-FROST_WARNING = 0.0      # Alert if temp < 0°C
+FROST_WARNING = 3.0      # Alert if temp < 3°C
 DROUGHT_WARNING = 0.20   # Alert if moisture < 20% (0.20)
 
 s3_client = boto3.client('s3')
