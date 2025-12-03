@@ -22,6 +22,9 @@ Modern agriculture requires precision. **Harvest-Guard** is an Industrial IoT (I
 3.  **Storage:** JSON payloads persisted in an **AWS S3 Data Lake**.
 4.  **Visualization:** Streamlit dashboard with KPI monitoring and historical trend analysis.
 
+## Architecture Diagram
+![Diagram](Diagram.png)
+
 ## 🛠️ Tech Stack
 | Component | Technology | Description |
 | :--- | :--- | :--- |
