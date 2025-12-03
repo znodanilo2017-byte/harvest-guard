@@ -2,7 +2,7 @@
 
 ### *Cloud-Native Remote Monitoring System for Agriculture*
 
-**Live Dashboard:** [Link to your Streamlit App](https://harvest-guard.streamlit.app)
+**Live Dashboard:** [Streamlit App](https://harvest-guard.streamlit.app)
 
 ---
 
