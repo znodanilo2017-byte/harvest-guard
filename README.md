@@ -6,6 +6,17 @@
 
 ---
 
+## 🎥 Demo in Action
+
+
+GIF ![Demo](demo_sensor.gif)
+
+---
+
+Full Demo [Video](https://youtube.com/shorts/NA6s34Qv1JM?feature=share) 
+
+---
+
 ## 🚀 The Mission
 Modern agriculture requires precision. **Harvest-Guard** is an Industrial IoT (IIoT) pipeline designed to remotely monitor field conditions in Ukraine, analyze soil health, and provide automated irrigation recommendations based on real-time weather forecasts.
 
@@ -21,6 +32,7 @@ Modern agriculture requires precision. **Harvest-Guard** is an Industrial IoT (I
 2.  **Transport:** Data shipped securely via **Docker** containers on **AWS EC2**.
 3.  **Storage:** JSON payloads persisted in an **AWS S3 Data Lake**.
 4.  **Visualization:** Streamlit dashboard with KPI monitoring and historical trend analysis.
+UPD: **Hardware**: Wired and programmed microcontroller (C++).
 
 ## Architecture Diagram
 ![Diagram](Diagram.png)
@@ -33,6 +45,8 @@ Modern agriculture requires precision. **Harvest-Guard** is an Industrial IoT (I
 | **Ingestion** | Python | `requests` (Lightweight edge client) |
 | **Dashboard** | Streamlit | `pandas`, `plotly` (Visual Analytics) |
 | **API** | Open-Meteo | Hyper-local weather data source |
+| **Hardware**: | ESP32 DevKit V1 | Capacitive Soil Moisture Sensor v1.2. |
+| **Firmware** | C++ (PlatformIO framework). |
 
 ## 📸 Visuals
 
