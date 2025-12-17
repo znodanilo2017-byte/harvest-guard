@@ -28,11 +28,12 @@ Modern agriculture requires precision. **Harvest-Guard** is an Industrial IoT (I
 * **AI Agronomist:** A logic engine that combines **Soil Moisture** data with **Precipitation Probability** to recommend actions (e.g., *"Don't water, rain is coming"*).
 
 ## 🏗️ Architecture
-1.  **Sensor Node (Edge):** Python client polling **Open-Meteo API** (simulating hardware sensors).
+1.  **Sensor Node (Edge):** Python client polling **Open-Meteo API** (temperature).
 2.  **Transport:** Data shipped securely via **Docker** containers on **AWS EC2**.
 3.  **Storage:** JSON payloads persisted in an **AWS S3 Data Lake**.
 4.  **Visualization:** Streamlit dashboard with KPI monitoring and historical trend analysis.
-UPD: **Hardware**: Wired and programmed microcontroller (C++).
+5.  UPD: **Hardware**: Wired and programmed microcontroller (C++).
+
 
 ## Architecture Diagram
 ![Diagram](Diagram.png)
